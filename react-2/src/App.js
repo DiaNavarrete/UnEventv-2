@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CardList from './components/cardList/CardList';
 
 function App() {
+  const [cards, setCards] = useState([])
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <CardList cards={cards} />
     </div>
   );
 }
