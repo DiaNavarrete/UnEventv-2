@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-
+import { Form, Input, DatePicker, TimePicker, Checkbox, AutoComplete, Select, Cascader, InputNumber } from 'antd';
+const { TextArea } = Input;
 /*
 class FormEvent extends React.Component {
     constructor(props) {
@@ -40,8 +41,17 @@ class FormEvent extends React.Component {
     }
   }*/
   const FormEvent = props => {
+    const opts = [
+      { label: 'Apple', value: 'Apple' },
+      { label: 'Pear', value: 'Pear' },
+      { label: 'Orange', value: 'Orange' },
+    ];
+    const dataSource = ['Burns Bay Road', 'Downing Street', 'Wall Street'];
+
     const [username, setUsername] = useState('')
-    
+    function onChange(checkedValues) {
+      console.log('checked = ', checkedValues);
+    }
     const handleSubmit = event => {
       event.preventDefault()
       
@@ -50,7 +60,7 @@ class FormEvent extends React.Component {
     }
     
     return (
-      <form onSubmit={handleSubmit}>
+      /*<form onSubmit={handleSubmit}>
         <input
           type="text"
           value={username}
@@ -59,7 +69,28 @@ class FormEvent extends React.Component {
           required
         />
         <button type="submit">Add card</button>
-      </form>
+      </form>*/
+      <Form >
+         
+            <Input
+              placeholder="Username"
+            />
+            <div style={{display:"flex"}}>
+              <DatePicker style={{ width: '70%' }} />
+              <TimePicker use12Hours format="h:mm:ss A" />
+            </div>
+            <AutoComplete
+      style={{ width: 200 }}
+      dataSource={dataSource}
+      placeholder="try to type `b`"
+      filterOption={(inputValue, option) =>
+        option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+      }
+    />
+            <TextArea rows={4} placeholder="Details" />
+            <Checkbox.Group options={opts} defaultValue={['Apple']} onChange={onChange} />
+    
+      </Form>
     )
   }
   export default FormEvent; 

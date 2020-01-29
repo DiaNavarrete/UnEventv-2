@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Card from './components/card/Card';
-import FormEvent from './components/FormEvent/FormEvent';
+import CardEvent from './components/CardEvent';
+import FormEvent from './components/FormEvent';
 
 const container=document.getElementById('root');
-const card=<Card title="Titulo"
+const card=<CardEvent title="Titulo"
 owner="dia"
+followers="10"
 place="uni"/>
 const forme= <FormEvent/>
 const pp=<App/>  //no funciona

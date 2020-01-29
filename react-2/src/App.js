@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CardList from './components/cardList/CardList';
+import CardList from './components/CardList';
 
 function App() {
   const [cards, setCards] = useState([])

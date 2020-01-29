@@ -1,0 +1,36 @@
+.container-master-servicios-mobile{
+    padding-top: 44px;
+}
+.img-clients-mobile{
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
+}
+.container-master-bg-services-mobile{
+    width: 100%;
+    height: 11rem;
+}
+.container-master-services-all-mobile{
+    padding: 0 2rem;
+}
+.text-description-single-service{
+    margin: 0;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.container-master-title-mobile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.text-company-mobile{
+    margin: 0;
+    color: #FE7300;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
